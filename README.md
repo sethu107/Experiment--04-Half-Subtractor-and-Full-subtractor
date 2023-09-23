@@ -1,4 +1,4 @@
-# Experiment--03-Half-Subtractor-and-Full-subtractor
+# Experiment--04-Half-Subtractor-and-Full-subtractor
 ## Implementation-of-Half-subtractor-and-Full-subtractor-circuit
 ## AIM:
 To design a half subtractor and full subtractor circuit and verify its truth table in Quartus using Verilog programming.
@@ -26,29 +26,51 @@ A full subtractor is a combinational circuit that performs subtraction involving
 Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 
 ## Procedure
-
-
-
-Write the detailed procedure here 
-
+Write the detailed procedure here
 
 ## Program:
-/*
+```
 Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
+Developed by: ALFRED AB
+RegisterNumber:  212222110002
+```
+### HALF SUBTRACTOR
+```
+module exp04(a,b,diff,borr);
+input a,b;
+output diff,borr;
+assign diff = a^b;
+assign borrow =((~a)&b);
+endmodule
+```
+### FULL SUBTRACTOR
+```
+module exp04(a,b,bin,diff,borrow);
+input a,b,bin;
+output diff,borr;
+assign diff= a^b^bin;
+assign borrow = ((~a)&b)|(b&bin)|((~a)&bin);
+endmodule
+```
 ## Output:
 
 ## Truthtable
-
-
+## HALF SUBTRACTOR:
+![266774508-5a03b027-62a4-4d5c-9701-6fc26011a4f4](https://github.com/Alfredsec/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/120621608/0287cea4-b4ad-40b8-9cef-49a762cca477)
+## FULL SUBTRACTOR:
+![266774519-7cda216c-b83f-4f64-bbc3-28daaa47429c](https://github.com/Alfredsec/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/120621608/589c781f-e943-41eb-b2d1-3b698b81a18a)
 
 ##  RTL realization
+## HALF SUBTRACTOR:
+![half](https://github.com/Alfredsec/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/120621608/1f3540fd-a6ba-4026-99ec-df099de942ab)
+## FULL SUBTRACTOR:
+![full](https://github.com/Alfredsec/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/120621608/1d9d31f0-742e-4fd2-8ff4-6066452cbfc3)
 
-
-## Timing diagram 
+## WAVEFORM:
+## HALF SUBTRACTOR:
+![half waveform](https://github.com/Alfredsec/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/120621608/24797857-477f-4e7b-a4f4-a481757803b7)
+## FULL SUBTRACTOR:
+![full waveform](https://github.com/Alfredsec/Experiment--04-Half-Subtractor-and-Full-subtractor/assets/120621608/0cec785b-1806-4ce8-bf4c-032d77305fa2)
 
 ## Result:
 Thus the half subtractor and full subtractor circuits are designed and the truth tables is verified using quartus software.
