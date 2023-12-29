@@ -1,4 +1,6 @@
-# Experiment--04-Half-Subtractor-and-Full-subtractor
+# NAME:SETHUPATHI
+# REG NO:23005510
+# EXPT NO: 04 Half-Subtractor-and-Full-subtractor
 ## Implementation-of-Half-subtractor-and-Full-subtractor-circuit
 ## AIM:
 To design a half subtractor and full subtractor circuit and verify its truth table in Quartus using Verilog programming.
@@ -29,13 +31,10 @@ Diff = A ⊕ B ⊕ Bin B = A'Bin + A'B + BBin
 Write the detailed procedure here
 
 ## Program:
-```
-Program to design a half subtractor and full subtractor circuit and verify its truth table in quartus using Verilog programming.
-Developed by: ALFRED AB
-RegisterNumber:  212222110002
-```
+Developed by: SETHUPATHI
+Register Number:  23005510
 ### HALF SUBTRACTOR
-```
+```python
 module exp04(a,b,diff,borr);
 input a,b;
 output diff,borr;
@@ -44,7 +43,7 @@ assign borrow =((~a)&b);
 endmodule
 ```
 ### FULL SUBTRACTOR
-```
+```python
 module exp04(a,b,bin,diff,borrow);
 input a,b,bin;
 output diff,borr;
